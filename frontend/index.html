@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Shoe Recommender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Find Your Perfect Running Shoe</h1>
+
+        <form action="/recommend" method="POST">
+
+            <!-- Budget -->
+            <label for="budget">Budget (AUD)</label>
+            <input type="number" id="budget" name="budget" placeholder="e.g. 200" required>
+
+            <!-- Foot Width -->
+            <label for="width">Foot Width</label>
+            <select id="width" name="width" required>
+                <option value="">Select...</option>
+                <option value="narrow">Narrow</option>
+                <option value="normal">Normal</option>
+                <option value="wide">Wide</option>
+            </select>
+
+            <!-- Foot Strike -->
+            <label for="footstrike">Foot Strike</label>
+            <select id="footstrike" name="footstrike" required>
+                <option value="">Select...</option>
+                <option value="heel">Rearfoot (Heel)</option>
+                <option value="mid">Midfoot</option>
+                <option value="toe">Forefoot</option>
+            </select>
+
+            <!-- Toe box -->
+            <label for="toebox">Toe Box</label>
+            <select id="toebox" name="toebox" required>
+                <option value="">Select...</option>
+                <option value="narrow">narrow</option>
+                <option value="normal">normal</option>
+                <option value="wide">wide</option>
+            </select>
+
+            <!-- Brand Preference (optional) -->
+            <div class="brand-row">
+                <label class="brand-label">Preferred Brand/s</label>
+                <div class="checkbox-options">
+                    <label><input type="checkbox" name="brands" value="Nike">Nike</label>
+                    <label><input type="checkbox" name="brands" value="ASICS">ASICS</label>
+                    <label><input type="checkbox" name="brands" value="Adidas">Adidas</label>
+                    <label><input type="checkbox" name="brands" value="New Balance">New Balance</label>
+                </div>
+            </div>
+            <!-- <label for="brand">Preferred Brand/s</label>
+            <select id="brand" name="brand">
+                <option value="">No preference</option>
+                <option value="Nike">Nike</option>
+                <option value="ASICS">ASICS</option>
+                <option value="Adidas">Adidas</option>
+                <option value="New Balance">New Balance</option>
+            </select> -->
+
+            <!-- Carbon Plate -->
+            <label for="carbon">Carbon Plated</label>
+            <select id="carbon" name="carbon" required>
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <!-- Purpose -->
+            <label for="purpose">Purpose</label>
+            <select id="purpose" name="purpose" required>
+                <option value="">Select...</option>
+                <option value="daily">Daily</option>
+                <option value="tempo">Tempo</option>
+                <option value="longrun">Long Run</option>
+                <option value="raceday">Race Day</option>
+            </select>
+
+            <!-- Submit -->
+            <button type="submit">Get Recommendations</button>
+
+        </form>
+    </div>
+</body>
+</html>
