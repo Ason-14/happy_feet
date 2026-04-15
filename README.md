@@ -2,3 +2,4 @@
 
 # smart recommendation system for runnings shoes
 # considers price, foot strike, brand, foot width
+# machine learning model
